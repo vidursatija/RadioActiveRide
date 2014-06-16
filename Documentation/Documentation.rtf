@@ -1,0 +1,189 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1138\cocoasubrtf230
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset77 ZapfDingbatsITC;}
+{\colortbl;\red255\green255\blue255;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \uc0\u9733 }{\leveltext\leveltemplateid1\'01\uc0\u9733 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\margl1440\margr1440\margb1800\margt1800
+\deftab708
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural\qc
+
+\f0\fs72 \cf0 \expnd0\expndtw0\kerning0
+\up0 \nosupersub \ulnone \outl0\strokewidth0 \strokec0 Barrel Joyride\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\fs36 \expnd0\expndtw0\kerning0
+Overview\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\fs24 \expnd0\expndtw0\kerning0
+Barrel Joyride is a trimmed down version of Jetpack Joyride by Half Brick, it is meant as a template and as such will still need to be fleshed out a bit for a proper release. That being said it is still pretty playable at the moment.\
+\
+It was designed around the dimensions of the iPad, as that is the device I own, however naturally being made in Corona it will work on plenty of other devices.\
+\
+A general overview of its features are:\
+\
+\pard\tx20\tx20\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+Infinite scrolling background\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+Collectible items\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+Obstacles ( moving, rotation and stationary )\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+Jetpack mechanics\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+Very basic particles for the jetpack\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+Data saving\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+Sound\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+Looping music playlist\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+OOP structure\
+\ls1\ilvl0
+\f1 \expnd0\expndtw0\kerning0
+{\listtext	\uc0\u9733 	}
+\f0 \expnd0\expndtw0\kerning0
+A wizard\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+\
+This documentation is not meant to be a full step-by-step tutorial but rather an explanation of all the various classes that are included. All the code is documented as well and hopefully is pretty easy to understand or at the very least use.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\fs36 \expnd0\expndtw0\kerning0
+Classes\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i \expnd0\expndtw0\kerning0
+class_Player.lua\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+The player class doesn\'92t really do all that much, it is essentially just a visual image that has a physical body attached. It has the main collision handler function and a Jetpack object attached to it which will be explained later. Things that could be done to this Class to expand it would be to allow for different visuals and also to separate the jetpack image from the player image and place it in the Jetpack class.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i\fs36 \expnd0\expndtw0\kerning0
+class_Jetpack.lua\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+The jetpack class is another simple class that just acts as the thrust part. It simply uses \'93applyForce\'94 to move the player and also plays a sound and creates the particle objects. Ways to expand this would be to move the actual jetpack image to it and allow for variations.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i\fs36 \expnd0\expndtw0\kerning0
+class_Sparkle.lua\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+The sparkle class is the particle that is chucked out from the jetpack, it has a plain white visual which is then coloured in code randomly to make it look all magical. It just uses a transition to chuck them out and a bit of randomness to make them more fluid.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i\fs36 \expnd0\expndtw0\kerning0
+\
+class_Coin.lua\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+Yet another simple class here consisting of a visual, a physics body set to \'93isSensor\'94 so that the player doesn\'92t get physically affected. The only function that really does any resemblance of work is \'93playerHit\'94 which is called when the player object collides with a coin. All it does is play a sound, fire off an event and then destroy itself. \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i\fs36 \expnd0\expndtw0\kerning0
+class_Zapper.lua\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+\
+I see a pattern here, this function is basically the same as the Coin class so I don\'92t really need to explain much.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i\fs36 \expnd0\expndtw0\kerning0
+class_Missile.lua\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+\
+The missile does a little more work than the rest of the classes as it actually has to move, but it is still pretty simple. It still has the regular image and physics stuff but it also has an \'93alert\'94 image that pops up on the right hand of the screen just before the missile is visible and then removes itself after a short while.\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i\fs36 \expnd0\expndtw0\kerning0
+class_Level.lua\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+This class does a little more work then most others, but don\'92t worry it\'92s still pretty simple. It loads up some json data which describe each of the level sections ( explained later ), creates a roof and floor so the player can\'92t escape and sorts out the scrolling.\
+\
+It has an update function that moves the two active level sections and then another one that creates a new section and destroys a previous one to allow for infinite scrolling.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i\fs36 \expnd0\expndtw0\kerning0
+\
+class_LevelSection.lua\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+The levelSection class is created through json data and sets the position of all the zappers, missiles and coins.\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i\fs36 \expnd0\expndtw0\kerning0
+\
+\
+class_Utils.lua\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\i0\fs24 \expnd0\expndtw0\kerning0
+\
+Just a class with a couple of helper functions for reading in files.\
+\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\fs36 \expnd0\expndtw0\kerning0
+Overview\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardeftab708\pardirnatural
+
+\fs24 \expnd0\expndtw0\kerning0
+I hope you enjoy this template, you are free to do whatever you want with it. You can modify the art, code anything just have fun and if possible give a shout out to Glitch Games if you do use it - @GlitchGames}
